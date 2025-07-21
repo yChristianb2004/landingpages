@@ -91,16 +91,13 @@ const Home = () => {
       {/* Header */}
       <header className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20"></div>
-        <div className="relative section-padding">
+        <div className="relative section-padding px-4 sm:px-6 md:px-8">
           <div className="container-max text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in">
-              Portfolio de
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in break-words">
+              ...
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Landing Pages</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto animate-slide-up">
-              Demonstração das minhas habilidades em desenvolvimento web através de landing pages funcionais e otimizadas para conversão
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 animate-slide-up">
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-4 animate-slide-up">
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 text-white">
                 <Code className="w-5 h-5" />
                 <span>React & TypeScript</span>
@@ -119,12 +116,12 @@ const Home = () => {
       </header>
 
       {/* Portfolio Grid */}
-      <section className="section-padding bg-gray-900">
+      <section className="section-padding bg-gray-900 px-2 sm:px-4 md:px-8">
         <div className="container-max">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white text-center mb-8 sm:mb-12">
             Projetos do Portfolio
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
             {landingPages.map((page, index) => (
               <div
                 key={page.id}
@@ -139,22 +136,19 @@ const Home = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
                 </div>
-                
-                <div className="p-6">
-                  <div className="flex items-center gap-3 mb-4">
+                <div className="p-4 sm:p-6">
+                  <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-4">
                     <div className={`p-2 rounded-lg ${page.color} text-white`}>
                       {page.icon}
                     </div>
-                    <h3 className="text-xl font-semibold text-white">{page.title}</h3>
+                    <h3 className="text-lg sm:text-xl font-semibold text-white">{page.title}</h3>
                   </div>
-                  
-                  <p className="text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-gray-300 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                     {page.description}
                   </p>
-                  
                   <Link
                     to={`/${page.id}`}
-                    className="inline-flex items-center gap-2 bg-white text-gray-900 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                    className="inline-flex items-center gap-2 bg-white text-gray-900 px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm sm:text-base"
                   >
                     Ver Demo
                     <ExternalLink className="w-4 h-4" />
@@ -167,9 +161,9 @@ const Home = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white section-padding">
+      <footer className="bg-gray-800 text-white section-padding px-2 sm:px-4 md:px-8">
         <div className="container-max text-center">
-          <p className="text-gray-400">
+          <p className="text-gray-400 text-xs sm:text-base">
             © 2024 Portfolio Landing Pages - Desenvolvido com React, TypeScript e Tailwind CSS
           </p>
         </div>

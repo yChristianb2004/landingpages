@@ -15,21 +15,19 @@ import GameLanding from './pages/GameLanding';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/saas" element={<SaasLanding />} />
-          <Route path="/agency" element={<AgencyLanding />} />
-          <Route path="/ecommerce" element={<EcommerceLanding />} />
-          <Route path="/portfolio" element={<PortfolioLanding />} />
-          <Route path="/startup" element={<StartupLanding />} />
-          <Route path="/fitness" element={<FitnessLanding />} />
-          <Route path="/crypto" element={<CryptoLanding />} />
-          <Route path="/food-delivery" element={<FoodDeliveryLanding />} />
-          <Route path="/travel" element={<TravelLanding />} />
-          <Route path="/game" element={<GameLanding />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/saas" element={<SaasLanding />} />
+        <Route path="/agency" element={<AgencyLanding />} />
+        <Route path="/ecommerce" element={<EcommerceLanding />} />
+        <Route path="/portfolio" element={<PortfolioLanding />} />
+        <Route path="/startup" element={<StartupLanding />} />
+        <Route path="/fitness" element={<FitnessLanding />} />
+        <Route path="/crypto" element={<CryptoLanding />} />
+        <Route path="/food-delivery" element={<FoodDeliveryLanding />} />
+        <Route path="/travel" element={<TravelLanding />} />
+        <Route path="/game" element={<GameLanding />} />
+      </Routes>
     </Router>
   );
 }
